@@ -1,0 +1,32 @@
+<!-- currency_rates.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Rates</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Currency Rates</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Currency</th>
+                    <th>Buy</th>
+                    <th>Sale</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for currency in currencies %}
+                <tr>
+                    <td>{{ currency.ccy }}</td>
+                    <td>{{ currency.buy }}</td>
+                    <td>{{ currency.sale }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
