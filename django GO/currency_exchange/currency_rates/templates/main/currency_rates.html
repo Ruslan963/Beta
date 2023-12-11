@@ -21,7 +21,11 @@
                 {% for rate in rates %}
                     <tr>
                         <td>{{ rate.currencyCodeA }}/{{ rate.currencyCodeB }}</td>
-                        <td>{{ rate.rateBuy }}</td>
+			{% if rate.rateBuy %}
+			<td> {{ rate.rateBuy }} </td>
+			{% else %}
+                        <td>{{ rate.rateCross }}</td>
+			{% endif %}
                     </tr>
                 {% endfor %}
             </tbody>
